@@ -1,4 +1,4 @@
-GITHUB TEST 2.0
+Git test 1
 # Phase 3 Project Guidelines
 
 ## Learning Goals
