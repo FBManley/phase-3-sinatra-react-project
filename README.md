@@ -1,4 +1,4 @@
-GIT CONNECT TEST
+GITHUB TEST 2.0
 # Phase 3 Project Guidelines
 
 ## Learning Goals
