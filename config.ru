@@ -11,5 +11,7 @@ end
 # Parse JSON from the request body into the params hash
 use Rack::JSONBodyParser
 
-# Our application
+# Our application - tells sinatra these are the controllers that have routes we wish to respond to 
 run ApplicationController
+run TasksController
+run UsersController
