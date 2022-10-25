@@ -1,4 +1,15 @@
-Git test 1
+# App Name:
+
+# Installation/Run:
+
+# Usage/Notes:
+
+# Credit/Sources:
+
+# Blog & Walkthrough video:
+
+//////////////////////////
+
 # Phase 3 Project Guidelines
 
 ## Learning Goals
