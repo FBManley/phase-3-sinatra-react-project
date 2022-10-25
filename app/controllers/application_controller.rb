@@ -1,5 +1,6 @@
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
+  # automatically use json in form of params for two way communication
   # need this to load tasks/users controllers
 
   # need user form to add user

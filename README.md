@@ -5,6 +5,54 @@
 # Usage/Notes:
 
 # Credit/Sources:
+Game.all.to_json(include: [:reviews])
+get '/reviews' do
+Review.all.order(id: :desclimit(5).to_json(include: [:game]) //asscoaitions are coming through endpoint here
+only one state needed on front end // 
+post '/games'
+    @game = Game.new(params)
+    if @game.save
+        @game.to_json(include [:reviews]) //new game added to state / match data to be in sync with each other
+    end
+games = [
+    {id: 1, name: "game 1"  reviews: [ {id: 1, name: "greview 1 game_id 1"}
+     {id: 2, name: "greview 1 game_id 2"}]}
+    {id: 2, name: "game 3"}
+    {id: 3, name: "game 3"}
+    {}
+    {}
+]
+reviews = [
+     {id: 1, name: "greview 1 game_id 1"}
+     {id: 2, name: "greview 1 game_id 2"}
+     {id: 1, name: "greview 1 game_id 1"}
+    {id: 2, name: "game 3"}
+    {id: 3, name: "game 3"}
+]
+games.find(game=> game.id == review.game_id)
+//
+touch empty_folder //name of porject
+keep both in same folder- 
+npm i -g yarn //faster than npm, yrn start vs npm start
+open new terminal and cd to make commits
+open onw for server
+open another for backend: branch- have a good template to just clopy ssh $ git clone 
+cd into project  then git checkout -b (making new branch)- not touching main, not reflected on main branch
+git checkout main
+git branch 
+git checkout (branch_name)
+how to keep one rep 
+make commit to branch, move to main and code will be back to normal
+bundle exec rake server for backened
+yarn start from frontend
+
+rake console // to interact with active record to check data
+
+schema
+  Shirt
+    id
+    brand
+    color
 
 # Blog & Walkthrough video:
 
