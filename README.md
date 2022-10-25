@@ -1,4 +1,4 @@
-# App Name:
+# App Name: To Do's
 
 # Installation/Run:
 
@@ -8,6 +8,15 @@
 
 # Blog & Walkthrough video:
 
+# MVP:
+Uses ActiveRecord
+At least two models with one-to-many relationship
+Create and Read for both models 
+Full CRUD for one of the models
+React front end to interact w API to perfrom CRUD
+Update State using setState after recieving response from POST/PATCH/DELETE req.  (do not rely on GET to update state)
+RESTful routes
+active record methods in your controller to grab the needed data from your database
 //////////////////////////
 
 # Phase 3 Project Guidelines

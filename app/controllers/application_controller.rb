@@ -5,5 +5,12 @@ class ApplicationController < Sinatra::Base
   get "/" do
     { message: "Good luck with your project!" }.to_json
   end
+  get "/users/:id" do
+    user = User.find_by(id: params[:id])
+    if user
+      user.to_json(include: :tasks)
+    else 
+      "404 - User not found"
+    end
 
 end
