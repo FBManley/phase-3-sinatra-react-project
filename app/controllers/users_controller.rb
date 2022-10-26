@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+    # current_user to return User.first (hardcoded-phase 4 will have auth)
     # All users
     get '/users' do
         users = User.all 
