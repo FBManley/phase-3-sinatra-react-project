@@ -53,6 +53,8 @@ schema
     id
     brand
     color
+/////
+http://localhost:9292/users
 
 # Blog & Walkthrough video:
 
