@@ -1,0 +1,2 @@
+-- SQLite
+CREATE TABLE users;

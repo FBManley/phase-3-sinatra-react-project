@@ -17,11 +17,11 @@ class UsersController < ApplicationController
     end
 
     post '/users' do 
-        binding.pry 
-        user = User.create(
+        # binding.pry 
+        user = User.create({
             name: params[:name],
             age: params[:age]
-        )
+        })
         user.to_json 
     end
 
