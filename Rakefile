@@ -1,6 +1,11 @@
 require_relative "./config/environment"
 require "sinatra/activerecord/rake"
 
+# desc "seeds"
+# task seed: :environemnt do 
+#   require_relative './db/seeds'
+# end
+
 desc "Start the server"
 task :server do  
   if ActiveRecord::Base.connection.migration_context.needs_migration?
@@ -9,7 +14,7 @@ task :server do
   end
 
   # rackup -p PORT will run on the port specified (9292 by default)
-  ENV["PORT"] ||= "9293"
+  ENV["PORT"] ||= "9295"
   rackup = "rackup -p #{ENV['PORT']}"
 
   # rerun allows auto-reloading of server when files are updated
