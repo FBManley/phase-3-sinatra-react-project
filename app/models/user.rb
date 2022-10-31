@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
         @age = age
         @breed = breed
     end
-
+# 
     def self.create_table
         sql =  <<-SQL
           CREATE TABLE IF NOT EXISTS users (
@@ -50,3 +50,4 @@ class User < ActiveRecord::Base
 end
 # NOTES:
 # When building an ORM to connect our Ruby program to a database, we equate a class with a database table and the instances that the class produces to rows in that table.
+# classes are mapped to tables inside a database, not to the database as a whole
