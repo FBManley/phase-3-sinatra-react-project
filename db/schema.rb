@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_10_25_201236) do
+ActiveRecord::Schema.define(version: 2022_10_31_185658) do
+
+  create_table "create_users", force: :cascade do |t|
+    t.string "name"
+    t.string "age"
+    t.string "occupation"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "tasks", force: :cascade do |t|
     t.string "task"
@@ -19,10 +27,29 @@ ActiveRecord::Schema.define(version: 2022_10_25_201236) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "user_data", force: :cascade do |t|
+    t.string "name"
+  end
+
+  create_table "user_info", force: :cascade do |t|
+    t.string "name"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "users_table", force: :cascade do |t|
+    t.string "name"
+    t.text "age"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "userz", force: :cascade do |t|
+    t.string "name"
   end
 
 end

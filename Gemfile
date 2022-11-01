@@ -16,7 +16,7 @@ gem "rack-contrib", "~> 2.3"
 # https://github.com/cyu/rack-cors
 gem "rack-cors", "~> 1.1"
 
-# An object-relational mapper
+# An object-relational mapper- allows us to put/take things out of databases and turn them into objects
 # https://guides.rubyonrails.org/active_record_basics.html
 gem "activerecord", "~> 6.1"
 

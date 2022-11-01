@@ -55,6 +55,13 @@ schema
     color
 /////
 http://localhost:9292/users
+////////////////////////////////////////////////
+   create_table :users do |t|
+      t.string :name
+      t.string :age
+      t.string :occupation
+      t.timestamps 
+    end
 
 # Blog & Walkthrough video:
 
