@@ -1,1 +1,0 @@
-[{"stmt":"SELECT * FROM create_users;","header":[],"rows":[]}]
