@@ -13,7 +13,7 @@ class Occupant < ActiveRecord::Base
     #     @income = income 
     #     # @@all << self 
     # end
-
+# ssasa
     # def self.count 
     #     @@occupant_count
     # end
