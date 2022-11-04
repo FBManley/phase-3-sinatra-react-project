@@ -1,4 +1,4 @@
-class Occupants < ActiveRecord::Migration[6.1]
+class FixNamespace < ActiveRecord::Migration[6.1]
   def change
     create_table :occupants do |t|
       t.string :name
