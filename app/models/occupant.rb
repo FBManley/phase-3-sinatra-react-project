@@ -1,30 +1,30 @@
 # require 'pry'
 class Occupant < ActiveRecord::Base
     # making these variables setters and getters?
-    attr_accessor :name, :age, :occupation, :income
+    # attr_accessor :name, :age, :occupation, :income
     # @@ class variables - one persistant value. 
     # @ instance variables
-    @@occupant_count = 0
+    # @@occupant_count = 0
     # initialize object 
-    def initialize(name:, age:, occupation:, income:)
-        @name = name insance variable 
-        @age = age 
-        @occupation = occupation 
-        @income = income 
-        # @@all << self 
-    end
+    # def initialize(name:, age:, occupation:, income:)
+    #     @name = name insance variable 
+    #     @age = age 
+    #     @occupation = occupation 
+    #     @income = income 
+    #     # @@all << self 
+    # end
 
     # def self.count 
     #     @@occupant_count
     # end
 
     # create object
-    occ1 = Occupant.new("John", "22", "bowler", "456")
-    occ2 = Occupant.new("Big", 34, "janitor", 98876)
+    # occ1 = Occupant.new("John", "22", "bowler", "456")
+    # occ2 = Occupant.new("Big", 34, "janitor", 98876)
 
     # call methods
     
-    binding.pry
+    # binding.pry
     # def all 
     #     # instance method -> doesnt have self
     # end
