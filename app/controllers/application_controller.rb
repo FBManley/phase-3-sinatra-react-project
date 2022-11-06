@@ -1,13 +1,7 @@
-# require 'binding.pry'
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
   # automatically use json in form of params for two way communication
-  # need this to load tasks/users controllers
-
-  # need user form to add user
-  # get "/" do
-  #   { message: "Good luck with your project!" }.to_json
-  # end
+  # full CRUD
   get "/artists" do 
     artists = Artist.all 
     artists.to_json 
@@ -18,5 +12,22 @@ class ApplicationController < Sinatra::Base
     artist.to_json 
   end
 
+  patch "/artists/:id" do 
+    artists = Artist.find(params[:id])
+    artists.update(name: params[:name], albums: params[:albums])
+    artists.to_json
+  end
+
+  delete "/artists/:id" do
+    artist = Artist.find(params[:id])
+    artist.destroy 
+    artist.to_json
+  end
+
+  # ////////////////////////////////////////////////////
+  # Read and Create
+  get "/venues" do 
+    venues = Venue.all.to_json
+  end
 
 end
