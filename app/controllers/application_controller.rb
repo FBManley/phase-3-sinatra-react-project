@@ -4,8 +4,12 @@ class ApplicationController < Sinatra::Base
   # need this to load tasks/users controllers
 
   # need user form to add user
-  get "/" do
-    { message: "Good luck with your project!" }.to_json
+  # get "/" do
+  #   { message: "Good luck with your project!" }.to_json
+  # end
+  get "/artists" do 
+    artists = Artist.all 
+    artists.to_json 
   end
 
 
