@@ -1,6 +1,9 @@
 class Artist < ActiveRecord::Base
     # has_many :venues
     # belongs_to recordlabel
+
+
+    
     # has_many shows/deals whatever
     # def self.create_with_name(name, albums)
     #     Artist.create(name: name, albums: albums)

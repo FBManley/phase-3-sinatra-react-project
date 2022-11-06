@@ -30,4 +30,9 @@ class ApplicationController < Sinatra::Base
     venues = Venue.all.to_json
   end
 
+  post "/venues" do
+    venue = Venue.create(name: params[:name], location: params[:location], price: params[:price])
+    venue.to_json 
+  end
+
 end
