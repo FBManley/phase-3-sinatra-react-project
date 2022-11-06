@@ -63,6 +63,11 @@ Artist.create(name: "loopin dub", albums: "hotinit")
 Venue.create(name: "Red Rocks", location: "Utah", price: 100)
 Venue.create(name: "Gulch Creek", location: "Washington", price: 80)
 Venue.create(name: "Tree Beach", location: "California", price: 150)
+
+RecordLabel.create(name: "gold plate records")
+RecordLabel.create(name: "LSD Rock")
+RecordLabel.create(name: "soft n swift llc")
+
 # run $ bundle exec rake db:create_migration NAME=description_of_change
 # run $ bundle exec rake db:migrate
 # run $ bundle exec rake db:migrate:status
