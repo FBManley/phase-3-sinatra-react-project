@@ -1,3 +1,4 @@
+# require 'binding.pry'
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
   # automatically use json in form of params for two way communication
@@ -10,6 +11,11 @@ class ApplicationController < Sinatra::Base
   get "/artists" do 
     artists = Artist.all 
     artists.to_json 
+  end
+
+  post "/artists" do 
+    artist = Artist.create(name: params[:name], albums: params[:albums])
+    artist.to_json 
   end
 
 
