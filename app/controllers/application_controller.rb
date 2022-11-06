@@ -23,8 +23,7 @@ class ApplicationController < Sinatra::Base
     artist.destroy 
     artist.to_json
   end
-
-  # ////////////////////////////////////////////////////
+  
   # Read and Create
   get "/venues" do 
     venues = Venue.all.to_json

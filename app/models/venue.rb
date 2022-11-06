@@ -1,5 +1,5 @@
 class Venue < ActiveRecord::Base
-    # has_many :artists
+    has_many :record_labels
     # create / read only
-    
+
 end
