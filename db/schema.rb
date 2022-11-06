@@ -10,26 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_05_034901) do
+ActiveRecord::Schema.define(version: 2022_11_05_235842) do
 
   create_table "artists", force: :cascade do |t|
     t.string "name"
-    t.string "genre"
-    t.integer "age"
-    t.string "hometown"
-  end
-
-  create_table "occupants", force: :cascade do |t|
-    t.string "name"
-    t.integer "age"
-    t.string "occupation"
-    t.integer "income"
-  end
-
-  create_table "users_info", force: :cascade do |t|
-    t.string "name"
-    t.integer "age"
-    t.string "occupation"
+    t.string "albums"
   end
 
 end
