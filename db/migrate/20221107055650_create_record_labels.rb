@@ -2,8 +2,8 @@ class CreateRecordLabels < ActiveRecord::Migration[6.1]
   def change
     create_table :record_labels do |t|
       t.string :name
-
-      t.timestamps
+      t.integer :artist_id
+      t.timestamps null: false
     end
   end
 end

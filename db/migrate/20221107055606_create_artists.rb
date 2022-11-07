@@ -5,7 +5,7 @@ class CreateArtists < ActiveRecord::Migration[6.1]
       t.string :albums
       t.belongs_to :record_labels, null: false, foreign_key: true
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end
