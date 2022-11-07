@@ -1,4 +1,5 @@
 puts "🌱 Seeding spices..."
+# SEED DATA NEEDS FIXED WITH CORRECT IDS
 
 # has_many venues, belongs_to recordlabel 
 Artist.create(name: "jacknjill rock", albums: "stackinpacks", record_labels_id: 1)
