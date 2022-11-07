@@ -29,6 +29,7 @@ RecordLabel.create(name: "soft n swift llc", record_labels_id: 3)
 # User.create(name: "Jake", age: "99")
 # User.create(name: "Bob", age: "23")
 # User.create(name: "Rachel", age: "54")
+# test out from : phase-3-active-record-associations-one-to-many
 #50.times do
   # create a game with random data
 #   game = Game.create(

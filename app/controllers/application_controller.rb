@@ -4,12 +4,12 @@ class ApplicationController < Sinatra::Base
   # full CRUD
   get "/artists" do 
     artists = Artist.all 
-    artists.to_json 
+    artists.to_json(include: :record_labels) 
   end
 
   post "/artists" do 
     artist = Artist.create(name: params[:name], albums: params[:albums])
-    artist.to_json 
+    artist.to_json
   end
 
   patch "/artists/:id" do 
@@ -23,7 +23,7 @@ class ApplicationController < Sinatra::Base
     artist.destroy 
     artist.to_json
   end
-  
+
   # Read and Create
   get "/venues" do 
     venues = Venue.all.to_json
