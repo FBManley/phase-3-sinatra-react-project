@@ -2,9 +2,9 @@ puts "🌱 Seeding spices..."
 # SEED DATA NEEDS FIXED WITH CORRECT IDS
 
 # has_many venues, belongs_to recordlabel 
-Artist.create(name: "jacknjill rock", albums: "stackinpacks", record_labels_id: 1)
-Artist.create(name: "robertluy rap", albums: "paperpaper", record_labels_id: 2)
-Artist.create(name: "loopin dub", albums: "hotinit", record_labels_id: 3)
+Artist.create(name: "jacknjill rock", albums: "stackinpacks")
+Artist.create(name: "robertluy rap", albums: "paperpaper")
+Artist.create(name: "loopin dub", albums: "hotinit")
 
 # belongs_to artist
 Venue.create(name: "Red Rocks", location: "Utah", price: 100 )
@@ -12,9 +12,9 @@ Venue.create(name: "Gulch Creek", location: "Washington", price: 80)
 Venue.create(name: "Tree Beach", location: "California", price: 150)
 
 # has_many artists- needs artist_id? 
-RecordLabel.create(name: "gold plate records", record_labels_id: 1)
-RecordLabel.create(name: "LSD Rock", record_labels_id: 2)
-RecordLabel.create(name: "soft n swift llc", record_labels_id: 3)
+RecordLabel.create(name: "gold plate records")
+RecordLabel.create(name: "LSD Rock")
+RecordLabel.create(name: "soft n swift llc")
 # Seed your database here
 
 

@@ -4,9 +4,7 @@ class CreateVenues < ActiveRecord::Migration[6.1]
       t.string :name
       t.string :location
       t.integer :price
-      t.belongs_to :artist, null: false, foreign_key: true 
-      
-      t.timestamps null: false
+      t.belongs_to :artist
     end
   end
 end

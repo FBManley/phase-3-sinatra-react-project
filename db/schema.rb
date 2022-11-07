@@ -10,34 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_07_055650) do
+ActiveRecord::Schema.define(version: 2022_11_07_163538) do
 
   create_table "artists", force: :cascade do |t|
     t.string "name"
     t.string "albums"
-    t.integer "record_labels_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["record_labels_id"], name: "index_artists_on_record_labels_id"
+    t.integer "record_label_id"
+    t.index ["record_label_id"], name: "index_artists_on_record_label_id"
   end
 
   create_table "record_labels", force: :cascade do |t|
     t.string "name"
-    t.integer "artist_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "venues", force: :cascade do |t|
     t.string "name"
     t.string "location"
     t.integer "price"
-    t.integer "artist_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.integer "artist_id"
     t.index ["artist_id"], name: "index_venues_on_artist_id"
   end
 
-  add_foreign_key "artists", "record_labels", column: "record_labels_id"
-  add_foreign_key "venues", "artists"
 end
