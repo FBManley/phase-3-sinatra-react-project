@@ -8,6 +8,8 @@ r3 = RecordLabel.create(name: "soft n swift llc")
 a1 = Artist.create(name: "jacknjill rock", albums: "stackinpacks", record_label_id: r1.id)
 a2 = Artist.create(name: "robertluy rap", albums: "paperpaper", record_label_id: r2.id)
 a3 = Artist.create(name: "loopin dub", albums: "hotinit", record_label_id: r3.id)
+a4 = Artist.create(name: "knights edge", albums: "4glory", record_label_id: r3.id)
+
 
 # belongs_to artist
 Venue.create(name: "Red Rocks", location: "Utah", price: 100, artist_id: a1.id)
