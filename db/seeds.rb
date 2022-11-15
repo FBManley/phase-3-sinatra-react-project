@@ -1,21 +1,24 @@
 puts "🌱 Seeding spices..."
 
-r1 = RecordLabel.create(name: "gold plate records")
-r2 = RecordLabel.create(name: "LSD Rock")
-r3 = RecordLabel.create(name: "soft n swift llc")
+record_label1 = RecordLabel.create(name: "gold plate records")
+record_label2 = RecordLabel.create(name: "LSD Rock")
+record_label3 = RecordLabel.create(name: "soft n swift llc")
 
 # has_many venues, belongs_to recordlabel 
-a1 = Artist.create(name: "jacknjill rock", albums: "stackinpacks", record_label_id: r1.id)
-a2 = Artist.create(name: "robertluy rap", albums: "paperpaper", record_label_id: r2.id)
-a3 = Artist.create(name: "loopin dub", albums: "hotinit", record_label_id: r3.id)
-a4 = Artist.create(name: "knights edge", albums: "4glory", record_label_id: r3.id)
+artist1 = Artist.create(name: "jacknjill rock", albums: "stackinpacks")
+artist2 = Artist.create(name: "robertluy rap", albums: "paperpaper")
+artist3 = Artist.create(name: "loopin dub", albums: "hotinit")
 
-
-# belongs_to artist
-Venue.create(name: "Red Rocks", location: "Utah", price: 100, artist_id: a1.id)
-Venue.create(name: "Gulch Creek", location: "Washington", price: 80, artist_id: a2.id)
-Venue.create(name: "Tree Beach", location: "California", price: 150, artist_id: a3.id)
-
+# belongs_to artist / venue needs artist_id and venue_id
+record_label1.venues.create(name: "Gulch Creek", location: "Washington", price: 80, artist_id: artist2.id)
+record_label1.venues.create(name: "Blue River", location: "California", price: 50, artist_id: artist2.id)
+record_label1.venues.create(name: "Happy Valley", location: "Oregon", price: 100, artist_id: artist2.id)
+record_label2.venues.create(name: "Sandy Beach", location: "Oregon", price: 200, artist_id: artist3.id)
+record_label2.venues.create(name: "Tree Beach", location: "California", price: 50, artist_id: artist3.id)
+record_label2.venues.create(name: "Mountain Lake", location: "Washington", price: 90, artist_id: artist3.id)
+record_label3.venues.create(name: "Elk River", location: "Oregon", price: 50, artist_id: artist1.id)
+record_label3.venues.create(name: "Hells Canyon", location: "Washington", price: 60, artist_id: artist1.id)
+record_label3.venues.create(name: "Heavens Gate", location: "California", price: 100, artist_id: artist1.id)
 
 puts "✅ Done seeding!"
 

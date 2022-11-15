@@ -5,6 +5,7 @@ class CreateVenues < ActiveRecord::Migration[6.1]
       t.string :location
       t.integer :price
       t.belongs_to :artist
+      t.belongs_to :record_label
     end
   end
 end
