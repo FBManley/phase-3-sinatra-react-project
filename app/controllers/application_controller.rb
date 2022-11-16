@@ -5,7 +5,7 @@ class ApplicationController < Sinatra::Base
   # full CRUD
   get "/artists" do 
     artists = Artist.all
-    artists.to_json() 
+    artists.to_json(include: [:record_label]) 
   end
 
   get "/record_labels" do 
