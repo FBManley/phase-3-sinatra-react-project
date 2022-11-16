@@ -15,20 +15,12 @@ ActiveRecord::Schema.define(version: 2022_11_07_163538) do
   create_table "artists", force: :cascade do |t|
     t.string "name"
     t.string "albums"
+    t.integer "record_label_id"
+    t.index ["record_label_id"], name: "index_artists_on_record_label_id"
   end
 
   create_table "record_labels", force: :cascade do |t|
     t.string "name"
-  end
-
-  create_table "venues", force: :cascade do |t|
-    t.string "name"
-    t.string "location"
-    t.integer "price"
-    t.integer "artist_id"
-    t.integer "record_label_id"
-    t.index ["artist_id"], name: "index_venues_on_artist_id"
-    t.index ["record_label_id"], name: "index_venues_on_record_label_id"
   end
 
 end

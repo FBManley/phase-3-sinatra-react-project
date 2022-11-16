@@ -28,6 +28,9 @@ gem "sinatra-activerecord", "~> 2.0"
 # https://github.com/ruby/rake
 gem "rake", "~> 13.0"
 
+# https://github.com/faker-ruby/faker
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main'
+
 # Provides functionality to interact with a SQLite3 database
 gem "sqlite3", "~> 1.4"
 

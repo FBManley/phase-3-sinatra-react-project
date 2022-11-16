@@ -4,8 +4,13 @@ class ApplicationController < Sinatra::Base
   # connects the Model. Sends response to the View.Interface between React and our database is our API
   # full CRUD
   get "/artists" do 
-    artists = Artist.all 
-    artists.to_json(include: :record_labels) 
+    artists = Artist.all.order(:name) 
+    artists.to_json(include: [:record_labels]) 
+  end
+
+  get "/record_labels" do 
+    rl = RecordLabel.all
+    rl.to_json(include: [:artists])
   end
 
   get "/artists/:id" do 
@@ -31,17 +36,13 @@ class ApplicationController < Sinatra::Base
   end
 
   # Read and Create
-  get "/venues" do 
-    Venue.all.to_json
-  end
+  # get "/record_labels" do 
+  #   Venue.all.to_json
+  # end
 
-  post "/venues" do
-    venue = Venue.create(name: params[:name], location: params[:location], price: params[:price])
-    venue.to_json 
-  end
-
-  get "/record_labels" do 
-    RecordLabel.all.to_json
-  end
+  # post "/venues" do
+  #   venue = Venue.create(name: params[:name], location: params[:location], price: params[:price])
+  #   venue.to_json 
+  # end
 
 end
