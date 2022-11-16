@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(version: 2022_11_07_163538) do
     t.string "name"
     t.string "albums"
     t.integer "record_label_id"
-    t.index ["record_label_id"], name: "index_artists_on_record_label_id"
   end
 
   create_table "record_labels", force: :cascade do |t|

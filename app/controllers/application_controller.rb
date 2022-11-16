@@ -3,9 +3,9 @@ class ApplicationController < Sinatra::Base
   # automatically use json in form of params for two way communication
   # connects the Model. Sends response to the View.Interface between React and our database is our API
   # full CRUD
+  # CREATED ARTISTS GIVES NULL RECORD_LABEL_ID
   get "/artists" do 
-    artists = Artist.all
-    artists.to_json() 
+    artists = Artist.all.to_json(include: [:record_label])
   end
 
   post "/artists" do
@@ -14,8 +14,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/record_labels" do 
-    rl = RecordLabel.all
-    rl.to_json(include: [:artists])
+    rl = RecordLabel.all.to_json(include: [:artists])
   end
 
   get "/record_labels/:id" do
