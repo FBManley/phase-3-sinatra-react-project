@@ -1,15 +1,15 @@
 puts "🌱 Seeding spices..."
-# RecordLabel.destroy_all
-# Artist.destroy_all
+RecordLabel.destroy_all
+Artist.destroy_all
 
-10.times do 
+5.times do 
   record_label = RecordLabel.create(
-    name: Faker::Artist.name
+    name: Faker::Artist.unique.name
   )
 
-  rand(1..5).times do 
+ 3.times do 
     Artist.create(
-      name: Faker::Name.name, 
+      name: Faker::Name.unique.name, 
       albums: Faker::Verb.base,
       record_label_id: record_label.id
     )

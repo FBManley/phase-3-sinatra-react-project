@@ -16,7 +16,7 @@ http://localhost:9292/users
 
 # MVP:
 Uses ActiveRecord : CHECK 
-At least two models with one-to-many relationship : CHECK
+A one-to-many relationship : CHECK
 Create and Read for both models 
 Full CRUD for one of the models
 React front end to interact w API to perfrom CRUD

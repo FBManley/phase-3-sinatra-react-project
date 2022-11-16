@@ -5,7 +5,12 @@ class ApplicationController < Sinatra::Base
   # full CRUD
   get "/artists" do 
     artists = Artist.all
-    artists.to_json(include: [:record_label]) 
+    artists.to_json() 
+  end
+
+  post "/artists" do
+    artists = Artist.create(name: params[:name], albums: params[:albums])
+    artists = Artist.all.to_json()
   end
 
   get "/record_labels" do 
@@ -13,11 +18,27 @@ class ApplicationController < Sinatra::Base
     rl.to_json(include: [:artists])
   end
 
-  # get "/record_labels/:id" do
-  #   rl = RecordLabel.find(params[:id])
-  #   rl.to_json()
-  # end
+  get "/record_labels/:id" do
+    rl = RecordLabel.find(params[:id])
+    rl.to_json(include: [:artists])
+  end
 
+  post "/record_labels" do 
+    rl = RecordLabel.create(name: params[:name])
+    rl = RecordLabel.all.to_json(include: [:artists])
+  end
+
+  patch "/record_labels/:id" do
+    rl = RecordLabel.find(params[:id])
+    rl.update(name: params[:name])
+    rl.to_json(include: [:artists])
+  end
+
+  delete "/record_labels/:id" do 
+    rl = RecordLabel.find(params[:id])
+    rl.destroy 
+    rl.to_json
+  end
   # get "/artists/:id" do 
   #   artist = Artist.find_by_id(params[:id])
   #   artist.to_json()
