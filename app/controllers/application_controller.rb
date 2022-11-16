@@ -9,12 +9,13 @@ class ApplicationController < Sinatra::Base
   end
 
   post "/artists" do
-    artists = Artist.create(name: params[:name], albums: params[:albums])
-    artists = Artist.all.to_json()
+    artists = Artist.create(name: params[:name], albums: params[:albums], record_label_id: params[:record_label_id])
+    artists = Artist.all.to_json(include: [:record_label])
   end
 
   get "/record_labels" do 
-    rl = RecordLabel.all.to_json(include: [:artists])
+    rl = RecordLabel.all
+    rl.to_json(include: [:artists])
   end
 
   get "/record_labels/:id" do
