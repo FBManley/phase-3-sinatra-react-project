@@ -1,6 +1,6 @@
 <!-- One To Many Relationships -->
-# App Name: BookMe
- venue booking for bands
+# App Name: SignMe
+
 # Installation/Run:
 
 # Usage/Notes:

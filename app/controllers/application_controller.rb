@@ -13,6 +13,12 @@ class ApplicationController < Sinatra::Base
     artists = Artist.all.to_json(include: [:record_label])
   end
 
+  delete "/artists/:id" do 
+    artists = Artist.find(params[:id], record_label_id: params[:record_label_id])
+    artists.destroy()
+    artists.to_json()
+  end
+
   get "/record_labels" do 
     rl = RecordLabel.all
     rl.to_json(include: [:artists])
@@ -39,5 +45,16 @@ class ApplicationController < Sinatra::Base
     rl.destroy() 
     rl.to_json()
   end
+  # how to delete nested data + parent-> in model-> primarily to do w association
+  # pointers for project review. 
+  # active record- what is it, methods associated
+  # create, find or create by-> takes in key values. 
+  # OO Ruby, attr_acessor, procedural (returning values), self keyword, initialize
+  # API flow, explain what params comes from, 
+  # body of json/ how frontend exactly connects to backend 
+  # associations, explain which gets foriegn key
+  # be able to impliment active record(get artist, get name of artist record label, use dot notation)
+  # demonstrate OO RUby - code challenge for that or active record
+  # ensure project review date was OK
 
 end
