@@ -10,6 +10,7 @@
 
 /////
 http://localhost:9292/users
+bundle exec rake server
 ////////////////////////////////////////////////
 
 # Blog & Walkthrough video:

@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 2022_11_07_163538) do
   create_table "artists", force: :cascade do |t|
     t.string "name"
     t.string "albums"
+    t.boolean "is_signed"
     t.integer "record_label_id"
   end
 

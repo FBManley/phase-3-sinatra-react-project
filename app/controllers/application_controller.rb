@@ -13,8 +13,14 @@ class ApplicationController < Sinatra::Base
     artists = Artist.all.to_json(include: [:record_label])
   end
 
+  patch "/artists/:id" do
+    artists = Artist.find(params[:id])
+    artists.update(record_label_id: params[:record_label_id])
+    artists.to_json()
+  end
+
   delete "/artists/:id" do 
-    artists = Artist.find(params[:id], record_label_id: params[:record_label_id])
+    artists = Artist.find(params[:id])
     artists.destroy()
     artists.to_json()
   end

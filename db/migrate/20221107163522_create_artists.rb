@@ -3,6 +3,7 @@ class CreateArtists < ActiveRecord::Migration[6.1]
     create_table :artists do |t|
       t.string :name 
       t.string :albums
+      t.boolean :is_signed
       t.integer :record_label_id
     end
   end
