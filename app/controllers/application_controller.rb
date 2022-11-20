@@ -15,8 +15,9 @@ class ApplicationController < Sinatra::Base
 
   patch "/artists/:id" do
     artists = Artist.find(params[:id])
-    artists.update(record_label_id: params[:record_label_id])
+    artists.update(record_label_id: params[:record_label_id], is_signed: params[:is_signed])
     artists.to_json()
+    # may need to change whats updated. restarting vs to port iss
   end
 
   delete "/artists/:id" do 
