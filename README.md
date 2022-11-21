@@ -1,7 +1,7 @@
 <!-- One To Many Relationships -->
 # App Name: SignMe
-This is a SPA using a REACT frint end and Sinatra/ActiveRecord backend.
-Backened Repo Link:
+This is a SPA using a REACT front end and Sinatra/ActiveRecord backend.
+Frontend Repo Link?
 
 # Installation/Run:
 http://localhost:9292
@@ -11,13 +11,16 @@ Fork and clone
 run $ bundle install
 run $ bundle exec rake db:seed
 run $ bundle exec rake server
+1. Add a record label: Read and Create
+2. Add an artist: Read and Create
+3. Update an artist siging: Update
+4. Delete an artist: Delete
+5. Repeat until full
 
-# Credit/Sources:
-
-# Blog & Walkthrough video:
 # YOUTUBE
 https://youtu.be/jPHTd_5Eqvc
 # BLOG
+https://medium.com/@jbmanley45/mvc-how-model-view-controller-frame-works-61edeeba489a
 
 # MVP:
 Uses ActiveRecord : CHECK 
